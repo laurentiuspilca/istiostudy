@@ -11,7 +11,7 @@ public class Istio1Application {
 
 	@GetMapping("/hello")
 	public String hello() {
-		return "Hello World";
+		return "Hello Istio!";
 	}
 
 	public static void main(String[] args) {
