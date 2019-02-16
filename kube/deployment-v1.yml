@@ -1,9 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-deployment
+  name: hello-deployment-v1
   labels:
     app: hello
+    version: v1
 spec:
   replicas: 1
   selector:

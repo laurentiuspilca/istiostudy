@@ -19,15 +19,9 @@ metadata:
   name: hello
 spec:
   hosts:
-  - "*"
-  gateways:
-  - hello-gateway
+  - hello
   http:
-  - match:
-    - uri:
-        exact: /hello
-    route:
+  - route:
     - destination:
-        host: hello-service
-        port:
-          number: 8080
+        host: hello
+        subset: v1
