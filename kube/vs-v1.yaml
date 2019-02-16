@@ -8,5 +8,5 @@ spec:
   http:
   - route:
     - destination:
-        host: hello
+        host: hello-service
         subset: v1
