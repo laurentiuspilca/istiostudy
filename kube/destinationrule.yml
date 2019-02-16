@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: hello
 spec:
-  host: hello-service
+  host: hello
   subsets:
   - name: v1
     labels:

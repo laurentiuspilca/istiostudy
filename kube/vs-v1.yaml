@@ -1,14 +1,14 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: hello-service
+  name: hello
 spec:
   hosts:
-  - hello-service
+  - hello
   gateways:
   - hello-gateway
   http:
   - route:
     - destination:
-        host: hello-service
+        host: hello
         subset: v1
