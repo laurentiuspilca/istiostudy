@@ -5,6 +5,8 @@ metadata:
 spec:
   hosts:
   - hello-service
+  gateways:
+  - hello-gateway
   http:
   - route:
     - destination:
