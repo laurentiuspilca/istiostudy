@@ -23,6 +23,10 @@ spec:
   gateways:
   - hello-gateway
   http:
+  - fault:
+      delay:
+        percent: 100
+        fixedDelay: 5s
   - match:
     - headers:
         someheader:
