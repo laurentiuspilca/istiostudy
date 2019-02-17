@@ -24,11 +24,14 @@ spec:
   - hello-gateway
   http:
   - match:
-    - uri:
-        exact: /hello
+    - headers:
+        someheader:
+          exact: abcd
     route:
     - destination:
         host: hello
+        subset: v2
+  - route:
+    - destination:
+        host: hello
         subset: v1
-        port:
-          number: 8080
