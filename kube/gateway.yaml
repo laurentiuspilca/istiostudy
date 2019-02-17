@@ -27,10 +27,6 @@ spec:
       delay:
         percent: 100
         fixedDelay: 5s
-  - match:
-    - headers:
-        someheader:
-          exact: abcd
     route:
     - destination:
         host: hello
