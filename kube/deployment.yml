@@ -11,13 +11,10 @@ spec:
   selector:
     app: hello
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: hello-deployment-v1
-  labels:
-    app: hello
-    version: v1
+  name: hello-v1
 spec:
   replicas: 1
   template:
@@ -33,13 +30,10 @@ spec:
         ports:
         - containerPort: 8080
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: hello-deployment-v2
-  labels:
-    app: hello
-    version: v2
+  name: hello-v2
 spec:
   replicas: 1
   template:
@@ -54,3 +48,4 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
+---
