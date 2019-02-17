@@ -23,15 +23,12 @@ spec:
   gateways:
   - hello-gateway
   http:
-  - fault:
-      delay:
-        percent: 100
-        fixedDelay: 5s
-    route:
-    - destination:
-        host: hello
-        subset: v2
   - route:
     - destination:
         host: hello
         subset: v1
+      weight: 10
+    - destination:
+        host: hello
+        subset: v2
+      weight: 90
