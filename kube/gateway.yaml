@@ -29,5 +29,6 @@ spec:
     route:
     - destination:
         host: hello
+        subset: v1
         port:
           number: 8080
